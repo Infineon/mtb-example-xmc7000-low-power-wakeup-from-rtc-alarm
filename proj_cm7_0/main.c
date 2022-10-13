@@ -47,7 +47,6 @@
 #include "cybsp.h"
 #include "cy_retarget_io.h"
 
-
 /*******************************************************************************
 * Macros
 ********************************************************************************/
@@ -120,7 +119,7 @@ int main(void)
     result = cybsp_init() ;
     if (result != CY_RSLT_SUCCESS)
     {
-        handle_error();
+        CY_ASSERT(0);
     }
 
     /* Enable global interrupts */
